@@ -1,0 +1,26 @@
+{
+  "name": "bilibili-video-analysis",
+  "version": "0.0.1",
+  "description": "获取 Bilibili 视频的真实地址",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/circle-hotaru/bilibili-video-analysis.git"
+  },
+  "keywords": [
+    "Bilibili",
+    "Node"
+  ],
+  "author": "circlehotarux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/circle-hotaru/bilibili-video-analysis/issues"
+  },
+  "homepage": "https://github.com/circle-hotaru/bilibili-video-analysis#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "commander": "^7.0.0",
+    "got": "^11.8.1"
+  }
+}
