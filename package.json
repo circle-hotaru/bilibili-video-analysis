@@ -1,10 +1,10 @@
 {
   "name": "bilibili-video-analysis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "获取 Bilibili 视频的真实地址",
   "main": "src/app.js",
   "bin": {
-    "bili-video": "src/index.js"
+    "bili-video": "bin/bili-video"
   },
   "scripts": {},
   "repository": {
@@ -13,7 +13,10 @@
   },
   "keywords": [
     "Bilibili",
-    "Node"
+    "Node",
+    "commander",
+    "got",
+    "cheerio"
   ],
   "author": "circlehotarux",
   "license": "MIT",
