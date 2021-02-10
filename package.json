@@ -1,8 +1,11 @@
 {
   "name": "bilibili-video-analysis",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "获取 Bilibili 视频的真实地址",
-  "main": "index.js",
+  "main": "src/app.js",
+  "bin": {
+    "bili-video": "src/index.js"
+  },
   "scripts": {},
   "repository": {
     "type": "git",

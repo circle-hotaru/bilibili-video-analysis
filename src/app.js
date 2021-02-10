@@ -1,12 +1,13 @@
-const { program } = require('commander');
-const url = require('url');
 const got = require('got');
 const cheerio = require('cheerio');
 
-async function getRealUrl(url) {
+const getRealUrl = async function (url) {
     const videoURL = new URL(url);
-    const host = videoURL.hostname,
-        path = videoURL.pathname;
+    const host = videoURL.hostname;
+    if (host.indexOf('bilibili.com') == -1) return 'url host wrong: ' + url;
+
+    const path = videoURL.pathname;
+
     const header = {
         'authority': host,
         'method': 'GET',
@@ -42,13 +43,4 @@ async function getRealUrl(url) {
     return realUrl;
 }
 
-program
-    .version('0.0.1')
-    .description("get the real address of Bilibili video")
-    .option("-u, --url <url>", "the url of Bilibili video", "https://www.bilibili.com/video/BV1yv411x7KQ")
-    .action(async (option) => {
-        let realUrl = await getRealUrl(option.url);
-        console.log(realUrl);
-    });
-
-program.parse(process.argv);
+module.exports = getRealUrl;
